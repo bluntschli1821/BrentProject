@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "BrentProject",
+    "name": "Brent",
     "slug": "BrentProject",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/logo-color1.png",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo-color1.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "black"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo-color1.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.danielsmond443.BrentProject"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logo-color1.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3757c396-5ff3-42db-a457-eff449c1139f"
+      }
     }
   }
 }
