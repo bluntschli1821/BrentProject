@@ -3,9 +3,9 @@ import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Icon from "@expo/vector-icons/MaterialIcons";
-import HomeScreen from "../screens/HomeScreen";
-import SupportScreen from "../screens/SupportScreen";
-import ProfileScreen from "../screens/ProfileScreen";
+import HomeScreen from "../screens/tab/HomeScreen";
+import SupportScreen from "../screens/tab/SupportScreen";
+import ProfileScreen from "../screens/tab/ProfileScreen";
 import TopTabNavigationScreen from "./TopTabNavigationScreen";
 
 export default TabNavigationScreen = () => {

@@ -17,7 +17,7 @@ export default SupportScreen = () => {
       <Text style={styles.stxt}>Support</Text>
 
       <Image
-        source={require("./../assets/support1.1.1.png")}
+        source={require("../../assets/support1.1.1.png")}
         style={styles.image}
       />
       <View style={styles.vCont}>

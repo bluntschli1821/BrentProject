@@ -13,7 +13,6 @@ export default function OnBoarding() {
       screenOptions={{
         animation: "slide_from_right",
         headerShown: false,
-        statusBarTranslucent: true,
       }}
     >
       <Stack.Screen name="OnBoarding1" component={OnBoarding1} />

@@ -1,4 +1,5 @@
 import Navigator from './navigator/Navigator';
+import { View, StyleSheet } from "react-native"
 
 export default function App() {
   return (
@@ -6,3 +7,11 @@ export default function App() {
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    backgroundColor: "#000",
+    paddingTop: 100,
+    height: "100%",
+  },
+});

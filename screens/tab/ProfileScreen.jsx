@@ -9,7 +9,7 @@ import {
 import React from "react";
 import { useAtom } from "jotai";
 import { useNavigation } from "@react-navigation/native";
-import { FormDataAtom } from "../theAtom/FormAtom";
+import { FormDataAtom } from "../../theAtom/FormAtom";
 import Edit from "@expo/vector-icons/Feather";
 
 export default function ProfileScreen() {
@@ -31,7 +31,7 @@ export default function ProfileScreen() {
             }
           />
           <Image
-            source={require("../assets/catPhoto.jpg")}
+            source={require("../../assets/catPhoto.jpg")}
             style={styles.image}
           />
         </View>

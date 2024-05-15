@@ -13,11 +13,15 @@ export default function OnBoarding2({ navigation }) {
       </Text>
       <Text style={styles.stxt2}>Swift, Affordable And Hassle Free</Text>
       <View style={styles.bottomView}>
+        <TouchableOpacity>
+          <Icon name="arrow-back-circle-outline" size={40} />
+        </TouchableOpacity>
+        <View style={styles.view}></View>
         <TouchableOpacity
           style={styles.Icon}
-          onPress={() => navigation.navigate("")}
+          onPress={() => navigation.navigate("OnBoarding3")}
         >
-          <Icon name="arrow-forward-circle" size={50} color={"#3d7dfd"} />
+          <Icon name="arrow-forward-circle" size={40} color={"#3d7dfd"} />
         </TouchableOpacity>
       </View>
       <TouchableOpacity
@@ -59,41 +63,38 @@ const styles = StyleSheet.create({
     fontWeight: "regular",
   },
   bottomView: {
-    height: 50,
+    height: 60,
     width: "100%",
-    borderWidth: 1,
     marginTop: 200,
-    borderRadius: 10,
-    borderColor: "grey",
     flexDirection: "row",
     alignItems: "center",
-    // justifyContent: "center",
-    alignContent: "center",
-    // verticalAlign: "center",
+    padding: 10,
+    justifyContent: "space-evenly",
+    // paddingHorizontal: 10,
   },
   Icon: {
-    // right: "80%",
-    // alignSelf: "flex-end",
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "grey",
     width: 50,
     height: "100%",
-    justifyContent: "center",
     alignItems: "center",
   },
   touch: {
     width: 60,
     height: 40,
-    // borderWidth: 1,
+    left: "37%",
+    marginTop: 15,
     borderRadius: 15,
     alignItems: "center",
-    // borderColor: "#3d7dfd",
     justifyContent: "center",
-    marginTop: 15,
-    left: "35%",
   },
   touchtext: {
     color: "#3d7dfd",
+  },
+  view: {
+    width: "60%",
+    // borderWidth: 1,
+    height: "100%",
+    borderRadius: 5,
+    // borderColor: "#fff",
+    alignItems: "center",
   },
 });
