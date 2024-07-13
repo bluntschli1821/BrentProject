@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614515698592",
+    "project_id": "brent-5889f",
+    "storage_bucket": "brent-5889f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614515698592:android:622a6949c33a38fc9312c5",
+        "android_client_info": {
+          "package_name": "com.project.Brent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMr31QmsyDig9QpBp7hE_w_456VzHxLuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

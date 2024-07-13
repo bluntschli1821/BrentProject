@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   bottomView: {
     height: 60,
     width: "100%",
-    marginTop: 200,
+    marginTop: 170,
     flexDirection: "row",
     alignItems: "center",
     padding: 10,

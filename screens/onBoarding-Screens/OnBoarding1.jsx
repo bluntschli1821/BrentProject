@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: 585,
+    height: "65%",
     resizeMode: "cover",
     marginBottom: 10,
   },
   logo: {
     width: 300,
-    height: 150,
+    height: "20%",
   },
   touch: {
     width: 300,

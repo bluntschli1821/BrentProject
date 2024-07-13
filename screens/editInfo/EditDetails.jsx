@@ -19,7 +19,7 @@ export default HomeScreen = () => {
   };
   const handleSubmit = () => {
     Navigation.navigate("Profile");
-    console.log("The Data is: ", formData);
+    console.log("The User Info: ", formData);
   };
   return (
     <ScrollView

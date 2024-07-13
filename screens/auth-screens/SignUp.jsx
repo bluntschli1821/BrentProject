@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { FormDataAtom } from "../../theAtom/FormAtom";
 import { useNavigation } from "@react-navigation/native";
@@ -10,16 +10,63 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from "react-native";
 import Person from "@expo/vector-icons/Octicons";
 import Email from "@expo/vector-icons/Entypo";
 import Key from "@expo/vector-icons/Ionicons";
 import Eye from "@expo/vector-icons/Ionicons";
+import { app } from "../../FirebaseConfig";
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   onAuthStateChanged,
+//   signOut,
+//   auth,
+// } from "firebase/auth";
 
-export default SignUp = () => {
+export default SignUp = ({
+  email,
+  setEmail,
+  name,
+  setName,
+  isSignup,
+  setIsSignup,
+  password,
+  setPassword,
+  errorMessage,
+  setErrorMessage,
+}) => {
+  // Authentication
+  // const auth = getAuth(app);
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged((auth, user) => {
+  //     setUserId(user);
+  //   });
+  //   return unsubscribe();
+  // }, [auth]);
+
+  // Handling authentication
+
+  // const handleAuthentication = async () => {
+  //   try {
+  //     if (user) {
+  //       console.log("Successfull signout");
+  //       await signOut(auth);
+  //     } else {
+  //       if (isSignup) {
+  //         await createUserWithEmailAndPassword(auth, email, password);
+  //         console.log("Successfull Signup");
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error(`Authentication failed` + error.message);
+  //   }
+  // };
+
   const Navigation = useNavigation();
   const [passwordShown, setPasswordShown] = useState(false);
-  const [password, setPassword] = useState();
   const toggleShowPassword = () => {
     setPasswordShown(!passwordShown);
     console.log("See Your Password");
@@ -47,7 +94,7 @@ export default SignUp = () => {
         source={require("../../assets/logo-color1.png")}
         style={styles.image}
       />
-      <View style={styles.signin}>
+      <KeyboardAvoidingView style={styles.signin} behavior="padding">
         <Text style={styles.text}>Sign Up</Text>
 
         <Text style={styles.txt}>User Name</Text>
@@ -74,10 +121,10 @@ export default SignUp = () => {
             secureTextEntry={!passwordShown}
             onValueChange={setPassword}
             keyboardType="email-address"
-            value={formData.email}
+            value={email}
             autoCapitalize="none"
             autoCorrect={false}
-            onChangeText={(text) => handleChange("email", text)}
+            onChangeText={setEmail}
           />
         </View>
 
@@ -110,7 +157,7 @@ export default SignUp = () => {
             SignIn
           </Text>
         </Text>
-      </View>
+      </KeyboardAvoidingView>
     </ScrollView>
   );
 };

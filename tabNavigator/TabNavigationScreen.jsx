@@ -79,7 +79,7 @@ export default TabNavigationScreen = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    height: 90,
+    height: 80,
     position: "absolute",
     backgroundColor: "#191919",
     borderTopRightRadius: 10,
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     elevation: 0,
     borderTopWidth: 0,
     borderTopColor: "transparent",
+    paddingBottom: 10,
   },
   tabBarLabelStyle: {
     fontSize: 14,

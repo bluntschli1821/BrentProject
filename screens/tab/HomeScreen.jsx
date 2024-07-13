@@ -175,6 +175,7 @@ export default HomeScreen = ({ navigation }) => {
               value={searchQuerry}
               autoCapitalize="none"
               autoCorrect={false}
+              clearBottonMode="while-editting"
             />
           </View>
           <Pressable onPress={() => Alert.alert("Coming Soon!")}>
@@ -210,6 +211,7 @@ export default HomeScreen = ({ navigation }) => {
                     selectedCategory === category ? "blue" : "transparent",
                   borderBottomWidth: selectedCategory === category ? 1 : 0,
                   height: 35,
+                  color: selectedCategory === category ? "" : "",
                 }}
               >
                 <Text
@@ -311,13 +313,13 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
-    gap: 30,
+    gap: 20,
     paddingTop: 50,
     flexGrow: 1,
   },
   ftView: {
     flexDirection: "row",
-    gap: 100,
+    gap: 60,
     width: "100%",
   },
   ftext: {
@@ -365,11 +367,11 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   productsContainer: {
-    top: 0,
+    top: -10,
     left: 0,
     right: 0,
     width: "100%",
-    height: "50%",
+    height: "55%",
   },
   categoryContainerStyle: {
     position: "absolute",
@@ -436,7 +438,7 @@ const styles = StyleSheet.create({
   catTxt: {
     fontSize: 20,
     marginLeft: 10,
-    color: "#3d3d3d",
+    color: "#ffffff",
     marginVertical: 10,
     fontWeight: "bold",
   },

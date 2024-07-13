@@ -6,13 +6,45 @@ import {
   Image,
   Alert,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { useAtom } from "jotai";
 import { useNavigation } from "@react-navigation/native";
 import { FormDataAtom } from "../../theAtom/FormAtom";
 import Edit from "@expo/vector-icons/Feather";
+import { ImageEditor, launchImageLibrary } from "react-native";
+// import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 
 export default function ProfileScreen() {
+  // Selecting Image
+  const [image, setImage] = useState({});
+
+  const handleImagePick = async () => {
+    try {
+      const options = {
+        title: "Select Image",
+        storageOptions: {
+          mediaType: "photo",
+          includeBase64: false,
+          selectionLimit: 1,
+        },
+      };
+
+      const response = await launchImageLibrary(options);
+      if (response.didCancel) {
+        console.log("User Cancelled Image Selection");
+      } else if (response.error) {
+        console.log("Image Pick Error" + response.error);
+      } else if (response.customButton) {
+        console.log("User Pressed Custom Button, " + response.customButton);
+      } else {
+        const source = { uri: response.assets[0].uri };
+        setImage(source);
+      }
+    } catch (error) {
+      console.log(`Error: ${error}`);
+    }
+  };
+
   const Navigation = useNavigation(true);
   const [formData] = useAtom(FormDataAtom);
   const handleEdit = () => {
@@ -23,17 +55,8 @@ export default function ProfileScreen() {
       <Text style={styles.ftxt}>Profile</Text>
       <View style={styles.edit}>
         <View style={styles.editV}>
-          <Edit
-            name="edit"
-            style={styles.icon}
-            onPress={() =>
-              Alert.alert("This function is not available right now")
-            }
-          />
-          <Image
-            source={require("../../assets/catPhoto.jpg")}
-            style={styles.image}
-          />
+          <Edit name="edit" style={styles.icon} onPress={handleImagePick} />
+          {image && <Image source={image} style={styles.image} />}
         </View>
         <View style={styles.editV1}>
           <Text style={styles.editI}>Full Name</Text>

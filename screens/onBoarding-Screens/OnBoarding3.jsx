@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   view: {
     width: "100%",
     height: 80,
-    marginTop: 200,
+    marginTop: 170,
     // borderWidth: 1,
     borderColor: "#fff",
     flexDirection: "row",
