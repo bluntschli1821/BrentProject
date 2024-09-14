@@ -20,12 +20,12 @@ const slides = [
     text: "Book your next property",
     backgroundColor: "#f4511e",
   },
-  {
-    id: 4,
-    // image: require("../assets/onboarding4.png"),
-    text: "Get updates on your bookings",
-    backgroundColor: "#ff9f43",
-  },
+  // {
+  //   id: 4,
+  //   // image: require("../assets/onboarding4.png"),
+  //   text: "Get updates on your bookings",
+  //   backgroundColor: "#ff9f43",
+  // },
   // more slides...
 ];
 
