@@ -50,7 +50,7 @@ export default HomeScreen = () => {
         placeholderTextColor="gray"
         value={formData.phone}
         onChangeText={(Number) => handleChange("phone", Number)}
-        keyboardType="number-pad"
+        keyboardType="numberic"
         maxLength={11}
       />
       <TextInput
