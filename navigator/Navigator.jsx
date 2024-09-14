@@ -7,6 +7,7 @@ import SignUp from "../screens/auth-screens/SignUp";
 import OnBoarding from "./OnBoarding";
 import EditDetails from "../screens/editInfo/EditDetails";
 
+
 export default function Navigator() {
   const Stack = createNativeStackNavigator();
 
