@@ -31,6 +31,7 @@ export default SignUp = ({
   setEmail,
   name,
   setName,
+   
   isSignup,
   setIsSignup,
   password,
